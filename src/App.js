@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-//import './App.css';
+import './App.css';
 import React, { useState } from "react";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="App">
       <h1>Full Name Display</h1>
       <form onSubmit={submit}>
         <label htmlFor="firstName">
@@ -50,9 +50,11 @@ function App() {
         </label>
         <br/>
         <button>Submit</button>
-      </form>
+        <br/>
+        <br/>
       <form>{fullName}</form>
-    </>
+      </form>
+    </div>
   );
 }
 
