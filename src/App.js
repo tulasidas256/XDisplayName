@@ -51,9 +51,9 @@ function App() {
         <br/>
         <button>Submit</button>
         <br/>
-        <br/>
-      <form>{fullName}</form>
       </form>
+      <br/>
+      <p>{fullName}</p>
     </div>
   );
 }
