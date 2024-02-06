@@ -39,7 +39,6 @@ function App() {
           />
         </label>
         <br/>
-        <br/>
         <label htmlFor="lastName">
           Last Name:
           <input
@@ -51,10 +50,8 @@ function App() {
           />
         </label>
         <br/>
-        <br/>
         <button onClick={submit}>Submit</button>
       </form>
-      <br/>
       {show ? <p>Full Name: {firstName} {lastName}</p> : <></>}
     </>
   );
