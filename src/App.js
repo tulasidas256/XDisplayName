@@ -51,7 +51,7 @@ function App() {
         <br/>
         <button>Submit</button>
       </form>
-      <p>{fullName}</p>
+      <form>{fullName}</form>
     </>
   );
 }
