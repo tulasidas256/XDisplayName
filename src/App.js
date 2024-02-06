@@ -9,15 +9,15 @@ function App() {
   const [fullName, setfullName] = useState('');
 
   // Function for set first name
-  const handleFirst = (e)=>{
+  const handleFirst = (e) => {
     setfirstName(e.target.value);
   };
   // Function for set last name
-  const handleLast = (e)=>{
+  const handleLast = (e) => {
     setlastName(e.target.value);
   };
   // Function for submit process
-  const submit = (e)=>{
+  const submit = (e) => {
     e.preventDefault();
     let text = `Full Name: ${firstName} ${lastName}`;
     setfullName(text);
@@ -37,7 +37,7 @@ function App() {
             required
           />
         </label>
-        <br/>
+        <br />
         <label htmlFor="lastName">
           Last Name:
           <input
@@ -48,11 +48,10 @@ function App() {
             required
           />
         </label>
-        <br/>
-        <button>Submit</button>
-        <br/>
+        <br />
+        <button type='submit'>Submit</button>
+        <br />
       </form>
-      <br/>
       <p>{fullName}</p>
     </div>
   );
