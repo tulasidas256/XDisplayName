@@ -6,7 +6,7 @@ function App() {
 
   const [firstName, setfirstName] = useState('');
   const [lastName, setlastName] = useState('');
-  const [show, setshow] = useState(false);
+  const [fullName, setfullName] = useState('');
 
   // Function for set first name
   const handleFirst = (e)=>{
@@ -19,15 +19,14 @@ function App() {
   // Function for submit process
   const submit = (e)=>{
     e.preventDefault();
-    if(firstName && lastName){
-      setshow(true);
-    }
+    let text = `Full Name: ${firstName} ${lastName}`;
+    setfullName(text);
   };
 
   return (
     <>
       <h1>Full Name Display</h1>
-      <form>
+      <form onSubmit={submit}>
         <label htmlFor="firstName">
           First Name:
           <input
@@ -50,9 +49,9 @@ function App() {
           />
         </label>
         <br/>
-        <button onClick={submit}>Submit</button>
+        <button>Submit</button>
       </form>
-      {show ? <p>Full Name: {firstName} {lastName}</p> : <></>}
+      <p>{fullName}</p>
     </>
   );
 }
